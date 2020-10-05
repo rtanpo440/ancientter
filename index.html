@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <!-- 文書情報 -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no,email=yes,address=yes">
+        <title>ancientter: 古文にするブックマークレット</title>
+
+        <meta name="description" content="古文にするブックマークレット ancientter">
+        <meta name="keywords" content="ancientter,古文,古文にする,ブックマークレット">
+
+        <!-- アイコン -->
+        <link rel="icon" href="icon.png">
+        <link rel="apple-touch-icon" href="icon.png">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <!-- Semantic UI -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+
+        <!-- 調整 -->
+        <style type="text/css">
+            body>.ui.container {
+                padding-top: 1.5em;
+                padding-bottom: 1em;
+            }
+
+            a:not([href]) {
+                color: gray;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- コンテナ -->
+        <div class="ui text container">
+            <!-- タイトル -->
+            <h1 class="ui dividing header">
+                古文にする ancientter
+            </h1>
+
+            <a class="ui blue button" href="https://twitter.com/intent/tweet?hashtags=古文にする,ancientter" target="_blank">
+                <i class="twitter icon"></i>
+                #古文にする #ancientter をいれてツイートする
+            </a>
+
+            <!-- これは何? -->
+            <h2>
+                これは何?
+            </h2>
+
+            <p>
+                すとうけんたろうさん (catincat.jp) のツール <a href="http://catincat.jp/javascript/kogo3.html">古文にする</a> を閲覧中のウェブサイトに対して実行するブックマークレットです。
+                同サイトのコードをお借りしています。
+            </p>
+            <p>
+                元々は Twitter で試していたのでこのような名前がついていますが、Twitter 以外のサイトでも普通に使用できます。
+            </p>
+
+            <!-- ブックマーク追加の方法 -->
+            <h2>
+                ブックマーク追加の方法
+            </h2>
+
+            <h3>
+                PC
+            </h3>
+            <p>
+                ancientter x.x.x というリンクをブックマークバーにドラッグ＆ドロップして追加すれば、適当なウェブサイトを閲覧しているときにそのブックマークをクリックすると表示される文章が古文に変換されます。
+            </p>
+
+            <h3>
+                スマートフォン
+            </h3>
+            <p>
+                次のブラウザをご利用の方は、リンクをそのままタップしてから、出現するメニューで「ブックマークに追加する」などの項目をタップします。
+            </p>
+            <ul>
+                <li>Safari (iOS, macOS)</li>
+                <li>Chrome (Android)</li>
+                <li>Opera (Android)</li>
+                <li>Samsung Internet</li>
+            </ul>
+
+            <!-- 使用方法 -->
+            <h2>
+                使用方法
+            </h2>
+
+            <p>
+                下の方にあるリンクをブックマークとして登録してから、別のサイトで呼び出せば表示されるあらゆる文章が古文に変換されます。
+                また、動的に追加されるコンテンツに対応するため、1秒ごとに変換処理が行われるので、重いサイトではパフォーマンスに影響が出る可能性もあります。
+            </p>
+            <p>
+                変換されたあとにもう一度実行すると元の文章に戻ります。ただし、変換されたあとに元の文章がウラで更新されていたようなケースでは、想定とは異なる動作をするかもしれません。
+            </p>
+
+            <!-- ダウンロードリンク -->
+            <h2>
+                ダウンロードリンク
+            </h2>
+
+            <p>
+                ブックマークの追加やソースの確認はこちらから!
+            </p>
+            <ul>
+                <li><a class="bm 0-1-0">ancientter 0.1.0</a> | <a class="source 0-1-0">source</a></li>
+            </ul>
+
+            <!-- ライセンス -->
+            <h2>
+                ライセンス
+            </h2>
+
+            <p>
+                ancientter-x.x.x.js は次のファイルの内容を取りいれています。kogo3.html についてはスクリプトの一部のみを使用しています。
+            </p>
+            <ul>
+                <li>http://catincat.jp/javascript/kogo3.html</li>
+                <li>http://catincat.jp/javascript/alphabet.js</li>
+                <li>http://catincat.jp/javascript/alphabet_s.js</li>
+                <li>http://catincat.jp/javascript/dictionary2.js</li>
+                <li>http://catincat.jp/javascript/katakana.js</li>
+                <li>http://catincat.jp/javascript/kogo3.js</li>
+                <li>http://catincat.jp/javascript/tokenizer2.js</li>
+            </ul>
+            <p>
+                以上のファイルは <a href="https://twitter.com/sutokentaro">Suto Kentaro</a> により <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ja">CC BY-NC 4.0</a> が適用されているものです。
+            </p>
+
+            <!-- 更新履歴 -->
+            <h2>
+                更新履歴
+            </h2>
+
+            <h3>
+                0.1.0
+            </h3>
+            <ul>
+                <li>
+                    ブックマークレットとして、表示される文字列を古文に置き換える最低限の処理を実装。
+                </li>
+                <li>
+                    Twitter などの動的に更新されるコンテンツを変換させるため、一定間隔での再変換を実装。また元テキストを保持するように対応。
+                </li>
+            </ul>
+
+            <!-- 作者について -->
+            <h2>
+                作者について
+            </h2>
+
+            <p>
+                りょうTanpo
+            </p>
+
+            <ul>
+                <li>
+                    Twitter: <a href="https://twitter.com/tanpo440">@tanpo440</a>
+                </li>
+                <li>
+                    GitHub: <a href="https://github.com/tanpo440">@tanpo440</a>
+                </li>
+            </ul>
+
+            <p>
+                このツールにバグやご指摘ありましたら Twitter 等でお願い致します。
+            </p>
+
+            <hr>
+
+            <p>
+                <small>
+                    © 2020 りょうTanpo "tanpo440"
+                </small>
+            </p>
+        </div>
+
+        <!-- ブックマークレット用の JS ファイル読み込み -->
+        <script>
+            async function load(release, file) {
+                const response = await fetch(file);
+                const source = await response.text();
+                $('.bm.' + release)
+                    .attr('href', source)
+                    .on('click', function (event) {
+                        event.preventDefault();
+                        try {
+                            navigator.share({
+                                title: '古文にする!!',
+                                url: source,
+                            });
+                        } catch (error) {
+                            alert('現在の環境ではシェア機能を利用できません。PCでご覧の方はこのリンクをブックマークバーにドラッグ＆ドロップしてください。');
+                        }
+                    });
+                $('.source.' + release)
+                    .attr('href', file);
+            };
+
+            load('0-1-0', 'ancientter-0.1.0.js');
+        </script>
+    </body>
+
+</html>
