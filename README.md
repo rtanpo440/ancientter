@@ -1,4 +1,4 @@
-# ancientter
+# ancientter-bm
 
 閲覧中のサイトの文章を古文にするブックマークレット
 
